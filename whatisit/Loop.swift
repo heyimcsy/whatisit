@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct Loop: View {
+    var array: [String] = ["춘리", "리사", "제니", "지수", "로제", "서윤", "보윤", "윤진", "우석"]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach(array, id: \.self, content: {item in
+            Text(item)
+        })
     }
 }
 
